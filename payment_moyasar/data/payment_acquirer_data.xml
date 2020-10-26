@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="payment_acquirer_moyasar_new" model="payment.acquirer">
+            <field name="name">Moyasar</field>
+            <field name="image_128" type="base64" file="payment_moyasar/static/src/img/moyasar_icon.png"/>
+            <field name="provider">moyasar</field>
+            <field name="moyasar_merchant_account">moyasar</field>
+            <field name="Moyasar_publishable_api_key">in</field>
+            <field name="provider">moyasar</field>
+                 <field name="moyasar_company_url">https://alrumaih.co/</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="Moyasar_scret_key">m key</field>
+             <field name="view_template_id" ref="payment_moyasar.moyasar_form"/>
+
+        </record>
+
+    </data>
+</odoo>

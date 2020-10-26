@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data >
+        <template id="moyasar_form">
+
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+
+            <input type="hidden" name="merchantReference" t-att-value="merchantReference"/>
+            <input type="hidden" name="paymentAmount" t-att-value="paymentAmount"/>
+            <input type="hidden" name="currencyCode" t-att-value="currencyCode"/>
+            <input type="hidden" name="shipBeforeDate" t-att-value="shipBeforeDate"/>
+            <input type="hidden" name="skinCode" t-att-value="skinCode"/>
+            <input type="hidden" name="merchantAccount" t-att-value="merchantAccount"/>
+            <input type="hidden" name="shopperLocale" t-att-value="shopperLocale"/>
+            <input type="hidden" name="sessionValidity" t-att-value="sessionValidity"/>
+            <input type="hidden" name="merchantSig" t-att-value="merchantSig"/>
+            <!-- URLs -->
+            <input type="hidden" name='resURL'
+                t-att-value="resURL"/>
+            <!-- custom -->
+            <input t-if="merchantReturnData" type="hidden" name='merchantReturnData'
+                t-att-value="merchantReturnData"/>
+            <!-- shopperEmail is not included for SHA-1. To avoid breaking compatibility,
+                    include only if filled in -->
+            <input t-if="shopperEmail"
+                type="hidden" name='shopperEmail' t-att-value="shopperEmail"/>
+
+
+        </template>
+<!--        <template id="moyasar_form1">-->
+<!--            <t t-call="website.layout">-->
+<!--     <div class="oe_structure">-->
+
+<!--<div class="container">-->
+<!--    <form accept-charset="UTF-8" action="https://api.moyasar.com/v1/payments.html?u=sk_test_GwH7M35mPJW7X5tyiVYDXpZR6ycuhkNafKXUMKyy:" method="POST">-->
+<!--        <input type="hidden" name="callback_url" value="https://www.alrumaih.com.sa" />-->
+<!-- <input type="hidden" name="publishable_api_key" value="pk_test_PFqgvNEjjZADru96KZSmUF1u4UGUMw8d5Tr1MRsB" />-->
+<!-- <input type="hidden" name="amount" value="7543.23" />-->
+
+<!-- <input type="hidden" name="description" value="Order id 1234 by guest" />-->
+
+<!--  <input type="hidden" name="Currency" value="SAR" />-->
+<!--   <input type="hidden" name="source[type]" value="creditcard" />-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6 mb-3">-->
+<!--                        <label for="cc-name">Name on card</label>-->
+<!--                        <input type="text" class="form-control" id="cc-name" name="source[name]" placeholder="" required=""/>-->
+<!--                        <small class="text-muted">Full name as displayed on card</small>-->
+<!--                        <div class="invalid-feedback"> Name on card is required </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 mb-3">-->
+<!--                        <label for="cc-number">Credit card number</label>-->
+<!--                        <input type="text" class="form-control" id="cc-number" name="source[number]" placeholder="" required=""/>-->
+<!--                        <div class="invalid-feedback"> Credit card number is required </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-3 mb-3">-->
+<!--                        <label for="cc-expiration">Month</label>-->
+<!--                        <input type="text" class="form-control" id="cc-month"  name="source[month]" placeholder="" required=""/>-->
+<!--                        <div class="invalid-feedback"> Expiration Month required </div>-->
+<!--                    </div>-->
+<!--                     <div class="col-md-3 mb-3">-->
+<!--                        <label for="cc-expiration">Year</label>-->
+<!--                        <input type="text" class="form-control" id="cc-year"  name="source[year]" placeholder="" required=""/>-->
+<!--                        <div class="invalid-feedback"> Expiration Year required </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3 mb-3">-->
+<!--                        <label for="cc-cvv">CVV</label>-->
+<!--                        <input type="text" class="form-control" id="cc-cvv" name="source[cvc]" placeholder="" required=""/>-->
+<!--                        <div class="invalid-feedback"> Security code required </div>-->
+<!--                    </div>-->
+<!--                      <div class="col-md-3 mb-3">-->
+<!--                          <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+<!--            </form>-->
+<!--        </div>-->
+
+<!--     </div>-->
+<!--            </t>-->
+<!--        </template>-->
+
+
+
+
+         <template id="payment_purchase" name="Moyasar Payment">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+
+
+                        <form role="form"   id="contactForm1"  action="https://api.moyasar.com/v1/payments.html" method="POST" accept-charset="UTF-8">
+<!--            <input type="hidden" name="data_set" t-att-data-action-url="txt_action" data-remove-me=""/> t-attf-action="txt_action"-->
+
+                             <input type="hidden" name="callback_url" value="https://alrumaih.co/moyasar/feedback" />
+                             <input type="hidden" name="publishable_api_key" value="pk_test_PFqgvNEjjZADru96KZSmUF1u4UGUMw8d5Tr1MRsB" />
+                              <input type="hidden" name="source[type]" value="creditcard" />
+                             <input type="hidden" name="amount" t-att-value="paymentAmount" />
+
+                             <input type="hidden" name="description" t-att-value="merchantReference" />
+                              <input type="hidden" name="Currency" value="SAR" />
+                            <input type="hidden" name="source[type]" value="creditcard" />
+
+   <div class="padding">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Credit Card</strong>
+                    <small>enter your card details</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" name="source[name]" id="name" type="text" placeholder="Enter your name" required="required"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="ccnumber">Credit Card Number</label>
+                                <div class="input-group">
+                                    <input class="form-control" name="source[number]" type="text" placeholder="0000 0000 0000 0000"   required="required"/>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="mdi mdi-credit-card" ></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="ccmonth">Month</label>
+                            <select class="form-control" id="ccmonth" name="source[month]" required="required">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="ccyear">Year</label>
+                            <select class="form-control" id="ccyear" name="source[year]" required="required">
+                                <t t-foreach='[2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,2072,2073,2074,2075,2076,2077,2078,2079,2080,2081,2082,2083,2084,2085,2086,2087,2088,2089,2090,2091,2092,2093,2094,2095,2096,2097,2098,2099,2100
+]' t-as="y">
+                                        <option t-esc='y' t-att-value='y'/>
+                                    </t>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="cvv">CVV/CVC</label>
+                                <input class="form-control" name="source[cvc]" id="cvv" type="text" placeholder="123" required="required"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                     <div id="error_msg" style="font-weight:bold;font-size:12px;color:red;"></div>
+                    <button class="btn btn-lg btn-success float-left" type="submit" id="submit_button_id">
+                        <i class="mdi mdi-gamepad-circle"></i> pay now</button>
+                    <button class="btn btn-lg btn-danger " type="reset">
+                        <i class="mdi mdi-lock-reset"></i> clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </t>
+   <script type="text/javascript"   src="/payment_moyasar/static/src/js/jquery.min.js"></script>
+   <script type="text/javascript" src="/payment_moyasar/static/src/js/payment_moyasar.js"></script>
+
+
+    </template>
+
+  <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                href="/payment_moyasar/static/src/css/style.css"/>
+
+        </xpath>
+<!--        <xpath expr="script[last()]" position="after">-->
+<!--            <script type="text/javascript"-->
+<!--                src="/payment_payfort/static/src/js/payment_form.js"/>-->
+<!--            <script type="text/javascript"-->
+<!--                src="/payment_payfort/static/src/js/payfort_merchant_page.js"/>-->
+<!--        </xpath>-->
+    </template>
+
+<!--                            <div t-att-class="'form-group col-lg-5' if bootstrap_formatting else 'form-group'">-->
+<!--                                <label for="source[name]" class="control-label">Card Name</label>-->
+<!--                                <input type="text" name="source[name]"  id="card_name"-->
+<!--                                       class="form-control" placeholder="e.g. John Doe" required="required"/>-->
+<!--                            </div>-->
+<!--                            <div t-attf-class="row mt8 #{'' if bootstrap_formatting else 'o_card_brand_detail'}">-->
+<!--                                <label for="source[number]" class="control-label">Card Number</label>-->
+<!--                                <input type="text" name="source[number]"  id="card_number_id"-->
+<!--                                       class="form-control" required="required"/>-->
+<!--                            </div>-->
+<!--                             <div t-att-class="'form-group col-lg-3' if bootstrap_formatting else 'form-group'">-->
+<!--                        <label for="cc-expiration">Month</label>-->
+<!--                        <input type="text" class="form-control" id="cc-month"  maxlength="3" name="source[month]" placeholder="Expires (MM)" required=""/>-->
+<!--                        <div class="invalid-feedback"> Expiration Month required </div>-->
+<!--                    </div>-->
+<!--                     <div class="col-md-3 mb-3">-->
+<!--                        <label for="cc-expiration">Year</label>-->
+<!--                        <input type="text" class="form-control" id="cc-year"   maxlength="5" name="source[year]" placeholder="Expires (YYYY)" required=""/>-->
+<!--                        <div class="invalid-feedback"> Expiration Year required </div>-->
+<!--                    </div>-->
+<!--                    <div t-att-class="'form-group col-lg-4' if bootstrap_formatting else 'form-group'">-->
+<!--                        <label for="cc-cvv">CVV</label>-->
+<!--                        <input type="text" class="form-control" id="cc-cvv" name="source[cvc]"  maxlength="4" placeholder="CVC" required=""/>-->
+<!--                        <div class="invalid-feedback"> Security code required </div>-->
+<!--                    </div>-->
+<!--                            <div class="clearfix oe_login_buttons">-->
+<!--                                <button type="submit" class="btn btn-primary pull-left">Purchase</button>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+    </data>
+</odoo>

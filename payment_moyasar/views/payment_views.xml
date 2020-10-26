@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="acquirer_form_moyasar" model="ir.ui.view">
+            <field name="name">acquirer.form.moyasar</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='inside'>
+                    <group attrs="{'invisible': [('provider', '!=', 'moyasar')]}">
+                        <field name="moyasar_merchant_account" attrs="{'required':[('provider', '=', 'moyasar'), ('state', '!=', 'disabled')]}" password="True"/>
+                        <field name="Moyasar_publishable_api_key" attrs="{'required':[('provider', '=', 'moyasar'), ('state', '!=', 'disabled')]}" password="True"/>
+                        <field name="Moyasar_scret_key" attrs="{'required':[('provider', '=', 'moyasar'), ('state', '!=', 'disabled')]}" password="True"/>
+                        <field name="moyasar_company_url" attrs="{'required':[('provider', '=', 'moyasar'), ('state', '!=', 'disabled')]}" password="True"/>
+                        <a colspan="2" href="https://moyasar.com/" target="_blank">How to configure your Moyasar account?</a>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>

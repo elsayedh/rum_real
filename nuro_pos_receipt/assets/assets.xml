@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+        <template id="nuro_pos_receipt.assets" inherit_id="point_of_sale.assets" name="point_of_sale assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/nuro_pos_receipt/static/src/js/Models.js"/>
+            </xpath>
+        </template>
+</odoo>
