@@ -1,0 +1,879 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bank_guarantees
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-01 16:02+0000\n"
+"PO-Revision-Date: 2020-12-01 16:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid ""
+"<a href=\"#\" data-oe-model=\"%s\" data-oe-id=\"%s\">Task </a> for <a "
+"href=\"#\" data-oe-model=\"%s\" data-oe-id=\"%s\">%s's</a> Review"
+msgstr ""
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                               Click to Create for New Record\n"
+"                            </p>"
+msgstr ""
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                           Click to Create for New Record\n"
+"                        </p>"
+msgstr ""
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "<strong>From</strong>:"
+msgstr "<strong>من</strong>"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "<strong>To</strong>:"
+msgstr "<strong>إلى</strong>"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_paid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_paid
+msgid "Acc Paid"
+msgstr ""
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_needaction
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_exception_decoration
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_state
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__approved
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__approved
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__approved
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__approved
+msgid "Approved"
+msgstr "وافق"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_attachment_count
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_bank_customer_guarantees
+msgid "Bank Customer Guarandtees"
+msgstr "خطاب الضمان للعملاء"
+
+#. module: bank_guarantees
+#: model:ir.actions.act_window,name:bank_guarantees.bank_customer_guarantees_action
+#: model:ir.actions.act_window,name:bank_guarantees.bank_vendor_guarantees_action
+#: model:ir.ui.menu,name:bank_guarantees.menu_bank_customer_guarantees
+#: model:ir.ui.menu,name:bank_guarantees.menu_bank_vendor_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_wizard_view_form
+msgid "Bank Guarantees"
+msgstr "الضمانات البنكية"
+
+#. module: bank_guarantees
+#: model:ir.actions.server,name:bank_guarantees.bank_guarantees_customer_reminder_ir_actions_server
+#: model:ir.actions.server,name:bank_guarantees.bank_guarantees_vendor_reminder_ir_actions_server
+#: model:ir.cron,cron_name:bank_guarantees.bank_guarantees_customer_reminder
+#: model:ir.cron,cron_name:bank_guarantees.bank_guarantees_vendor_reminder
+#: model:ir.cron,name:bank_guarantees.bank_guarantees_customer_reminder
+#: model:ir.cron,name:bank_guarantees.bank_guarantees_vendor_reminder
+msgid "Bank Guarantees Expiration"
+msgstr "انتهاء صلاحية الضمانات المصرفية"
+
+#. module: bank_guarantees
+#: model:ir.actions.server,name:bank_guarantees.bank_guarantees_customer_activity_ir_actions_server
+#: model:ir.actions.server,name:bank_guarantees.bank_guarantees_vendor_activity_ir_actions_server
+#: model:ir.cron,cron_name:bank_guarantees.bank_guarantees_customer_activity
+#: model:ir.cron,cron_name:bank_guarantees.bank_guarantees_vendor_activity
+#: model:ir.cron,name:bank_guarantees.bank_guarantees_customer_activity
+#: model:ir.cron,name:bank_guarantees.bank_guarantees_vendor_activity
+msgid "Bank Guarantees Expiration Activity"
+msgstr "نشاط انتهاء صلاحية الضمانات المصرفية"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_tree
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_tree
+msgid "Bank Guarantees Tree"
+msgstr "شجرة الضمانات"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid "Bank Guarantees-%s Expired On %s"
+msgstr "الضمان-%s انتهى في %s"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__bank_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__bank_name
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_bank_vendor_guarantees
+msgid "Bank Vendor Guarandtees"
+msgstr "خطابات الضمان للبائعين"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__guarantee_type__basic_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__guarantee_type__basic_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__guarantee_type__basic_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__guarantee_type__basic_g
+msgid "Basic Guarantee 1%"
+msgstr "ضمان إبتدائي %1"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__bg_invoice_amount
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__bg_invoice_amount
+msgid "Bg Invoice Amount"
+msgstr ""
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_lines_wizard
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_lines_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__create_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__create_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__create_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__create_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__create_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__create_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__create_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__create_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__create_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__create_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__currency_id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__customer_id
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+msgid "Customer"
+msgstr "العميل"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__related_guarantee33
+msgid "Customer Guarantee"
+msgstr "خطاب الضمان للعميل"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__guarantee_letter33
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__is_guarantee_letter33
+msgid "Customer Guarantee Letter"
+msgstr "خطاب الضمان للعميل"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__description
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__description
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_customer_report_report_view__display_name
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_vendor_report_report_view__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid "Documents"
+msgstr "مستندات"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__draft
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__draft
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__draft
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__end
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__end
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__end
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__end
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_wizard_view_form
+msgid "End"
+msgstr "إنهاء"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__end_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__end_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__end_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__guarantee_type__final_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__guarantee_type__final_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__guarantee_type__final_g
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__guarantee_type__final_g
+msgid "Final Guarantee 5%"
+msgstr "ضمان نهائي %5"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_follower_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_channel_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_partner_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__guarantee_letter33
+msgid "Generated Letter"
+msgstr "خطاب الضمان"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_lines_wizard
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_lines_wizard
+msgid "Get Report"
+msgstr "طباعة التقرير"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_account
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_account
+msgid "Guarantee Account"
+msgstr "حساب الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_amount
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_amount
+msgid "Guarantee Amount"
+msgstr "مبلغ الضمان"
+
+#. module: bank_guarantees
+#: model:ir.actions.report,name:bank_guarantees.guarantee_customer_report_report
+#: model:ir.model,name:bank_guarantees.model_report_bank_guarantees_guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_lines_wizard
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+msgid "Guarantee Customer Report"
+msgstr "تقرير خطاب الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_expense
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_expense
+msgid "Guarantee Expense"
+msgstr ""
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_expense_account
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_expense_account
+msgid "Guarantee Expense Account"
+msgstr "حساب مصاريف الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__guarantee_letter
+msgid "Guarantee Letter"
+msgstr "خطاب الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_no
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_no
+msgid "Guarantee Number"
+msgstr "رقم الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_rate
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_rate
+msgid "Guarantee Rate"
+msgstr "معدل الضمان"
+
+#. module: bank_guarantees
+#: model:ir.actions.act_window,name:bank_guarantees.action_guarantee_customer_report_wizard
+#: model:ir.actions.act_window,name:bank_guarantees.action_guarantee_vendor_report_wizard
+#: model:ir.ui.menu,name:bank_guarantees.menu_guarantee_customer_report_wizard_main
+#: model:ir.ui.menu,name:bank_guarantees.menu_guarantee_vendor_report_wizard_main
+msgid "Guarantee Report"
+msgstr "تقرير خطاب الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_total_amount
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_total_amount
+msgid "Guarantee Total Amount"
+msgstr "المبلغ الإجمالي للضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_total_other_c
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_total_other_c
+msgid "Guarantee Total Amount (Other Currency)"
+msgstr "المبلغ الإجمالي للضمان (العملة الأخرى)"
+
+#. module: bank_guarantees
+#: model:ir.actions.report,name:bank_guarantees.guarantee_vendor_report_report
+#: model:ir.model,name:bank_guarantees.model_report_bank_guarantees_guarantee_vendor_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_lines_wizard
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Guarantee Vendor Report"
+msgstr "تقرير خطاب الضمان للمورد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_period
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_period
+msgid "Guarantees Period"
+msgstr "فترة الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__name
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__name
+msgid "Guarantees Reference"
+msgstr "مرجع الضمان"
+
+#. module: bank_guarantees
+#: model:ir.ui.menu,name:bank_guarantees.menu_guarantee_customer_report_wizard
+#: model:ir.ui.menu,name:bank_guarantees.menu_guarantee_vendor_report_wizard
+msgid "Guarantees Reports"
+msgstr "تقارير خطابات الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__guarantee_type
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__guarantee_type
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__guarantee_type
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__guarantee_type
+msgid "Guarantees Type"
+msgstr "نوع الضمان"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_customer_report_report_view__id
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_vendor_report_report_view__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_exception_icon
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__activity_exception_icon
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_needaction
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_unread
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_needaction
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_has_error
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_has_sms_error
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_has_error
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_is_follower
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__is_guarantee_letter
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__is_guarantee_letter33
+msgid "Is Guarantee Letter"
+msgstr "خطاب ضمان؟"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__issue_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__issue_date
+msgid "Issue Date"
+msgstr "تاريخ الاصدار"
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_move_paid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_move_paid
+msgid "Journal Entries (Paid)"
+msgstr "القيود اليومية (مدفوع)"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_move_refund
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_move_refund
+msgid "Journal Entries (Refund)"
+msgstr "القيود اليومية (مرتجع)"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_move_renew
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_move_renew
+msgid "Journal Entries (Renew)"
+msgstr "القيود اليومية (تجديد)"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_customer_report_report_view____last_update
+#: model:ir.model.fields,field_description:bank_guarantees.field_report_bank_guarantees_guarantee_vendor_report_report_view____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__write_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__write_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__write_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__write_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__write_uid
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__write_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__write_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__write_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__write_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__write_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_main_attachment_id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_has_error
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__new_end_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__new_end_date
+msgid "New EndDate"
+msgstr "تاريخ انتهاء جديد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_date_deadline
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_summary
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_type_id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__notes
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__notes
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_needaction_counter
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_has_error_counter
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_needaction_counter
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_has_error_counter
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__message_unread_counter
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__paid
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__paid
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__paid
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__paid
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Paid Journal Entries"
+msgstr "إدخالات دفتر اليومية المدفوعة"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid "Please Enter New 'End Date' Field"
+msgstr "رجاءً .. أدخل تاريخ انتهاء جديد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__print_all
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__print_all
+msgid "Print All"
+msgstr "طباعة الكل"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__refund
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__refund
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__refund
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__refund
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Refund"
+msgstr "إعادة المال"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_refund_c
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_refund
+msgid "Refunded Account"
+msgstr ""
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Refunded Journal Entries"
+msgstr "إدخالات دفتر اليومية المرتجعة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__related_guarantee33
+msgid "Related Customer Guarantee Letter"
+msgstr "خطاب ضمان العميل المرتبط"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__related_guarantee
+msgid "Related Vendor Guarantee Letter"
+msgstr "خطاب ضمان المورد المرتبط"
+
+#. module: bank_guarantees
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_customer_guarantees__state__renew
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__bank_vendor_guarantees__state__renew
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_customer_report_wizard__state__renew
+#: model:ir.model.fields.selection,name:bank_guarantees.selection__guarantee_vendor_report_wizard__state__renew
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_wizard_view_form
+msgid "Renew"
+msgstr "تجديد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees_wizard__renew
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees_wizard__renew
+msgid "Renew ?"
+msgstr "تجديد ؟"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__renew_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__renew_date
+msgid "Renew Date"
+msgstr "تاريخ التجديد"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Renew/End"
+msgstr "إعادة دفع/إنهاء"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__acc_renew_c
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__acc_renew
+msgid "Renewed Account"
+msgstr ""
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Renewed Journal Entries"
+msgstr "إدخالات دفتر اليومية المجددة"
+
+#. module: bank_guarantees
+#: code:addons/bank_guarantees/models/bank_customer_guarantees.py:0
+#: code:addons/bank_guarantees/models/bank_vendor_guarantees.py:0
+#, python-format
+msgid "Request Approve"
+msgstr "طلب موافقة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__activity_user_id
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_has_sms_error
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_view_form
+msgid "Set To Draft"
+msgstr "تعيين إلى مشروع"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__start_date
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__state
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__state
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_customer_report_wizard__state
+#: model:ir.model.fields,field_description:bank_guarantees.field_guarantee_vendor_report_wizard__state
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "State"
+msgstr "حالة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__activity_state
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_customer_report_report_view
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Type"
+msgstr "نوع"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__activity_exception_decoration
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_unread
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__message_unread_counter
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__vat
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__vat
+msgid "VAT"
+msgstr "ضريبة القيمة المضافة"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__vendor_id
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.guarantee_vendor_report_report_view
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_account_move__related_guarantee
+msgid "Vendor Guarantee"
+msgstr "خطاب الضمان للمورد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__guarantee_letter
+#: model:ir.model.fields,help:bank_guarantees.field_account_move__is_guarantee_letter
+msgid "Vendor Guarantee Letter"
+msgstr "خطاب الضمان للمورد"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_customer_guarantees__website_message_ids
+#: model:ir.model.fields,field_description:bank_guarantees.field_bank_vendor_guarantees__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: bank_guarantees
+#: model:ir.model.fields,help:bank_guarantees.field_bank_customer_guarantees__website_message_ids
+#: model:ir.model.fields,help:bank_guarantees.field_bank_vendor_guarantees__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: bank_guarantees
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_customer_guarantees_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:bank_guarantees.bank_vendor_guarantees_wizard_view_form
+msgid "Write New 'End Date'"
+msgstr "رجاءً اكتب تاريخ انتهاء جديد"
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_bank_customer_guarantees_wizard
+msgid "bank.customer.guarantees.wizard"
+msgstr ""
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_bank_vendor_guarantees_wizard
+msgid "bank.vendor.guarantees.wizard"
+msgstr ""
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_guarantee_customer_report_wizard
+msgid "guarantee.customer.report.wizard"
+msgstr ""
+
+#. module: bank_guarantees
+#: model:ir.model,name:bank_guarantees.model_guarantee_vendor_report_wizard
+msgid "guarantee.vendor.report.wizard"
+msgstr ""

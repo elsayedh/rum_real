@@ -1,0 +1,93 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_guarantee_customer_report_report">
+        <field name="name">paperformat.guarantee.customer.report.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">15</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="guarantee_customer_report_report"
+            model="guarantee.customer.report.wizard"
+            string="Guarantee Customer Report"
+            report_type="qweb-pdf"
+            name="bank_guarantees.guarantee_customer_report_report_view"
+            paperformat="paperformat_guarantee_customer_report_report"
+            menu="False"/>
+
+    <template id="guarantee_customer_report_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+
+
+                <div >
+                    <img src="bank_guarantees/static/description/img/header.jpeg"
+                     style="top:10px;width:100%;height:150px;"/>
+                </div>
+                <br/>
+                <div>
+                    <h3 class="text-center">Guarantee Customer Report</h3>
+                    <h4 class="text-center" t-if="date_start">
+                        <strong>From</strong>:
+                        <t t-esc="date_start"/>
+                        <strong>To</strong>:
+                        <t t-esc="date_end"/>
+                    </h4>
+                </div>
+
+                <br/>
+
+
+            <div class="page">
+
+                <table  style="border-collapse: collapse;border: 2px solid #ddd;font-size:16px; width:100%;padding-top:0;margin-top:0">
+                                    <tr class="thead-light" style="padding:0px; margin:0px;border-top: 2px solid #ddd;background-color: #f2f2f2;">
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 20%">Description</th>
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 30%">Bank Name</th>
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 20%">Customer</th>
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 11%">Type</th>
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 9%">State</th>
+                                        <th class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width: 10%">Amount</th>
+                                    </tr>
+
+                                   <tr t-foreach="docs" t-as="doc" >
+                                       <td style="padding: 8px;border: 2px solid #ddd;text-align: center; width:16%">
+                                           <span t-esc="doc['description']"/>
+                                       </td>
+                                       <td style="padding: 8px;border: 2px solid #ddd;text-align: center;width:16%">
+                                           <span t-esc="doc['bank_name']"/>
+                                       </td>
+                                      <td style="padding: 8px;border: 2px solid #ddd;text-align: center; width:16%">
+                                           <span t-esc="doc['customer_id']"/>
+                                       </td>
+                                        <td style="padding: 8px;border: 2px solid #ddd;text-align: center;width:16%">
+                                           <span t-esc="doc['guarantee_type']"/>
+                                       </td>
+                                       <td class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center; width:16%">
+                                           <span t-esc="doc['state']"/>
+                                       </td>
+                                       <td class="text-center" style="padding: 8px;border: 2px solid #ddd;text-align: center;width:16%">
+                                           <span t-esc="doc['guarantee_expense']"/>
+
+                                       </td>
+                                   </tr>
+                                </table>
+
+            </div>
+                <div class="footer">
+                    <img src="sales_custom_report/static/description/img/footer.jpeg"
+                     style="top:10px;width:100%;height:80px;"/>
+                </div>
+
+        </t>
+        </t>
+    </template>
+</odoo>

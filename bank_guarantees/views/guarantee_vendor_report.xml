@@ -1,0 +1,49 @@
+<odoo>
+
+
+
+    <record model="ir.ui.view" id="guarantee_vendor_lines_wizard">
+        <field name="name">Guarantee Vendor Report</field>
+        <field name="model">guarantee.vendor.report.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Guarantee Vendor Report">
+                <group>
+                    <group>
+                        <field name="start_date" attrs="{'invisible': [('print_all','=',True)]}"/>
+                        <field name="end_date" attrs="{'invisible': [('print_all','=',True)]}"/>
+                    </group>
+                    <group>
+                        <field name="state" attrs="{'invisible': [('print_all','=',True)]}"/>
+                        <field name="guarantee_type" attrs="{'invisible': [('print_all','=',True)]}"/>
+                    </group>
+                    <group>
+                        <field name="print_all"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_guarantee_vendor_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_guarantee_vendor_report_wizard"
+                name="Guarantee Report"
+                res_model="guarantee.vendor.report.wizard"
+                view_mode="form"
+                target="new"/>
+
+
+     <menuitem id="menu_guarantee_vendor_report_wizard"
+               name="Guarantees Reports"
+               groups="account.group_account_manager"
+               sequence="322" parent="account.menu_finance_payables" />
+
+     <menuitem action="action_guarantee_vendor_report_wizard" id="menu_guarantee_vendor_report_wizard_main"
+               sequence="0"
+               groups="account.group_account_manager"
+               parent="menu_guarantee_vendor_report_wizard" />
+
+</odoo>
