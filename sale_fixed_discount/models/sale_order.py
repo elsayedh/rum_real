@@ -43,7 +43,7 @@ class SaleOrderLine(models.Model):
             lambda l: l.discount_fixed and l.order_id.state not in ["done", "cancel"]
         ):
             real_price = line.price_unit * (1 - (line.discount or 0.0) / 100.0) - (
-                line.discount_fixed or 0.0
+                (line.discount_fixed/line.product_uom_qty) or 0.0
             )
             twicked_price = real_price / (1 - (line.discount or 0.0) / 100.0)
             vals[line] = {
