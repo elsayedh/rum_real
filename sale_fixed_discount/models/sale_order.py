@@ -10,7 +10,7 @@ class SaleOrderLine(models.Model):
 
     discount_fixed = fields.Float(
         string="Discount (Fixed)",
-        
+        digits="Product Price",
         help="Fixed amount discount.",
     )
 
@@ -38,22 +38,22 @@ class SaleOrderLine(models.Model):
         "product_uom_qty", "discount", "price_unit", "tax_id", "discount_fixed"
     )
     def _compute_amount(self):
-        vals = {}
-        for line in self.filtered(
-            lambda l: l.discount_fixed and l.order_id.state not in ["done", "cancel"]
-        ):
-            real_price = line.price_unit * (1 - (line.discount or 0.0) / 100.0) - (
-                (line.discount_fixed/line.product_uom_qty) or 0.0
-            )
-            twicked_price = real_price / (1 - (line.discount or 0.0) / 100.0)
-            vals[line] = {
-                "price_unit": line.price_unit,
-            }
-            line.update({"price_unit": twicked_price})
-        res = super(SaleOrderLine, self)._compute_amount()
-        for line in vals.keys():
-            line.update(vals[line])
-        return res
+        def _compute_amount(self):
+            """
+            Compute the amounts of the SO line.
+            """
+            for line in self:
+                price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+                taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty,
+                                                product=line.product_id, partner=line.order_id.partner_shipping_id)
+                line.update({
+                    'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+                    'price_total': taxes['total_included']-line.discount_fixed,
+                    'price_subtotal': taxes['total_excluded']-line.discount_fixed,
+                })
+                if self.env.context.get('import_file', False) and not self.env.user.user_has_groups(
+                        'account.group_account_manager'):
+                    line.tax_id.invalidate_cache(['invoice_repartition_line_ids'], [line.tax_id.id])
 
     def _prepare_invoice_line(self):
         res = super(SaleOrderLine, self)._prepare_invoice_line()
