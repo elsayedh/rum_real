@@ -74,7 +74,6 @@
                     <!-- Add your fields or attributes here -->
                     <group name="branch">
                         <field name="pos_ids" widget="many2many_tags"/>
-                        <field name="stock_ids" widget="many2many_tags"/>
                     </group>
                 </xpath>
 
