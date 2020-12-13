@@ -47,6 +47,40 @@
 	
 	<!-- =================== pos order ======================== -->
 
+<!--	     &lt;!&ndash;POS Config&ndash;&gt;-->
+
+<!--    <record id="stock1_user_rule" model="ir.rule">-->
+<!--        <field name="name">Stock User</field>-->
+<!--        <field name="model_id" ref="stock.model_stock_picking_type"/>-->
+<!--        <field name="global" eval="True"/>-->
+<!--        <field name="domain_force">[('id','in',user.stock_ids.ids)]</field>-->
+<!--        <field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>-->
+<!--    </record>-->
+<!--    <record id="stock1_manager_rule" model="ir.rule">-->
+<!--        <field name="name">Stock User</field>-->
+<!--        <field name="model_id" ref="stock.model_stock_picking_type"/>-->
+<!--        <field name="global" eval="True"/>-->
+<!--        <field name="domain_force">[(1,'=',1)]</field>-->
+<!--        <field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="pos1_user_rule" model="ir.rule">-->
+<!--        <field name="name">POS User</field>-->
+<!--        <field name="model_id" ref="point_of_sale.model_pos_config"/>-->
+<!--        <field name="global" eval="True"/>-->
+<!--        <field name="domain_force">[('id','in',user.pos_ids.ids)]</field>-->
+<!--        <field name="groups" eval="[(4, ref('point_of_sale.group_pos_user'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="pos1_manager_rule" model="ir.rule">-->
+<!--        <field name="name">POS Manager</field>-->
+<!--        <field name="model_id" ref="point_of_sale.model_pos_config"/>-->
+<!--        <field name="global" eval="True"/>-->
+<!--        <field name="domain_force">[(1,'=',1)]</field>-->
+<!--        <field name="groups" eval="[(4, ref('point_of_sale.group_pos_manager'))]"/>-->
+<!--    </record>-->
+
+
 	<record id="pos_order_branch_manager_rule" model="ir.rule">
 		<field name="name">POS Order Branch Manager</field>
 		<field name="model_id" ref="model_pos_order"/>
@@ -114,8 +148,10 @@
 		<field name="name">POS Config Branch User</field>
 		<field name="model_id" ref="model_pos_config"/>
 		<field name="global" eval="True"/>
-		<field name="domain_force">['|', ('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>
+		<field name="domain_force">[('id','in',user.pos_ids.ids)]</field>
 		<field name="groups" eval="[(4, ref('pos_branch.group_branch_user'))]"/>
+<!--	domain_force was like that 		<field name="domain_force">['|', ('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>
+-->
 	</record>
 
 	<record id="pos_config_non_branch_user_rule" model="ir.rule">

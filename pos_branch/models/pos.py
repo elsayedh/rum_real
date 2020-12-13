@@ -10,6 +10,8 @@ class res_users(models.Model):
 	branch_id = fields.Many2one('res.branch', 'Current Branch')
 	branch_ids = fields.Many2many('res.branch', id1='user_id', id2='branch_id',string='Allowed Branches')
 
+	pos_ids = fields.Many2many('pos.config', string="POS Config Permission")
+	stock_ids = fields.Many2many('stock.picking.type', string="Stock Config Permission")
 	is_branch_user = fields.Boolean("Is branch user",compute="_compute_branch_user")
 
 	def _compute_branch_user(self):
