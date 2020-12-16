@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+
+        <menuitem name="Website"
+          id="website.menu_website_configuration"
+          sequence="9"
+          groups="security_control.group_flags_website_menuitem"
+          web_icon="website,static/description/icon.png"/>
+
+        <menuitem name="Contacts"
+            id="contacts.menu_contacts"
+            sequence="9"
+            web_icon="contacts,static/description/icon.png"
+            groups="base.group_partner_manager,security_control.group_flags_contacts_menuitem"/>
+
+        <menuitem
+            id="menu_hr_root"
+            name="Employees"
+            groups="hr.group_hr_manager,hr.group_hr_user,security_control.group_flags_employees_menuitem"
+            web_icon="hr,static/description/icon.png"
+            sequence="75"/>
+
+        <menuitem
+            id="menu_quality_root"
+            name="Quality"
+            web_icon="quality_control,static/description/icon.png"
+            sequence="51"
+            groups="security_control.group_flags_quality_menuitem"/>
+
+
+    </data>
+</odoo>
