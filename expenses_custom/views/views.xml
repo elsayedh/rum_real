@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+      <record id="custom_res_config_view_form_inherit" model="ir.ui.view">
+        <field name="name">custom.res.config.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Expenses" string="Expenses" data-key="hr_expense" groups="hr_expense.group_hr_expense_manager">
+                    <div class="row mt16 o_settings_container">
+                    <div class="col-lg-6 col-12 o_setting_box">
+                        <group>
+                            <label for="Maximum Amount" string="Approver Maximum Amount"/>
+                             <div>
+                                <field name="maximum_amount_approver" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </div>
+                    </div>
+                    </div>
+                </xpath>
+        </field>
+      </record>
+
+      <record id="custom_hr_expense_view_form_inherit" model="ir.ui.view">
+        <field name="name">custom.hr.expense.view.form.inherit</field>
+        <field name="model">hr.expense.sheet</field>
+        <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <field name="is_maximum" invisible="1"/>
+                </group>
+            </xpath>
+            <xpath expr="//header" position="replace">
+                 <header>
+                    <button name="action_submit_sheet" states="draft" string="Submit to Manager" type="object" class="oe_highlight o_expense_sheet_submit"/>
+                    <button name="approve_expense_sheets" states="submit" string="Approve" type="object" groups="hr_expense.group_hr_expense_team_approver" class="oe_highlight o_expense_sheet_approve"/>
+                    <button name="action_sheet_move_create" string="Post Journal Entries" type="object" groups="account.group_account_manager" attrs="{'invisible': [('state', '!=', 'approve')]}" class="oe_highlight o_expense_sheet_post"/>
+                    <button name="%(hr_expense.hr_expense_sheet_register_payment_wizard_action)d" type="action" string="Register Payment" class="oe_highlight o_expense_sheet_pay" attrs="{'invisible': ['|',('state', '!=', 'post'),('is_maximum','=',False)]}" context="{'default_amount': total_amount, 'partner_id': address_id}" groups="hr_expense.group_hr_expense_manager"/>
+                    <button name="%(hr_expense.hr_expense_sheet_register_payment_wizard_action)d" type="action" string="Register Payment" class="oe_highlight o_expense_sheet_pay" attrs="{'invisible': ['|',('state', '!=', 'post'),('is_maximum','!=',False)]}" context="{'default_amount': total_amount, 'partner_id': address_id}" groups="account.group_account_manager"/>
+                    <button name="reset_expense_sheets" string="Reset to Draft" type="object" attrs="{'invisible': ['|', ('can_reset', '=', False), ('state', 'not in', ['submit', 'cancel'])]}"/>
+                    <button name="%(hr_expense.hr_expense_refuse_wizard_action)d" states="submit,approve" context="{'hr_expense_refuse_model':'hr.expense.sheet'}" string="Refuse" type="action" groups="hr_expense.group_hr_expense_team_approver" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit,approve,post,done"/>
+                </header>
+            </xpath>
+
+        </field>
+      </record>
+
+  </data>
+</odoo>

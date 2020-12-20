@@ -29,7 +29,6 @@
         <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
     </record>
 
-
     <record id="res_branch_user_rule" model="ir.rule">
         <field name="name">Res Branch User</field>
         <field name="model_id" ref="model_res_branch"/>
@@ -37,7 +36,6 @@
         <field name="domain_force">[('id','=',user.branch_id.id)]</field>
         <field name="groups" eval="[(4, ref('branch.group_branch_user'))]"/>
     </record>
-
 
     <record id="sale.sale_order_personal_rule" model="ir.rule">
         <field name="name">Personal Orders</field>

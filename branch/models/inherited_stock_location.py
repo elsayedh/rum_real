@@ -8,7 +8,7 @@ class StockLocation(models.Model):
     _inherit = 'stock.location'
 
     branch_id = fields.Many2one('res.branch')
-
+    
     @api.constrains('branch_id')
     def _check_branch(self):
         warehouse_obj = self.env['stock.warehouse']
